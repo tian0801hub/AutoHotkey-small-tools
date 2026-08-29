@@ -1,3 +1,43 @@
+# Word图片批量插入工具 / Word Image Batch Inserter
+
+> 一个专门用于Word自动化工具。 / A specialized Word automation tool for batch inserting construction images into Word documents.
+
+> **作者 Author：天tian0801hub**
+>
+> **⚠️ 免责声明 Disclaimer：本工具仅供内部办公使用，请在使用前务必备份原始文档。禁止任何形式的商业售卖或转卖。**
+
+![GitHub Release](https://github.com/tian0801hub/AutoHotkey-small-tools)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6)
+![AHK Version](https://img.shields.io/badge/AutoHotkey-v2.0-blue)
+![License](https://img.shields.io/badge/License-Non--Commercial-e95f6d)
+
+[下载最新版 / Download](https://github.com/tian0801hub/AutoHotkey-small-tools/releases/latest) · [问题反馈 / Issues](https://github.com/tian0801hub/AutoHotkey-small-tools/issues)
+
+
+## 中文
+
+### 主要功能
+
+- **批量自动插入**：自动识别Word文档中所有“2列4行”的表格结构（第1、3行为图片框，第2、4行为标题行），并自动跳过标题行，精准插入图片。
+- **保持比例，完美居中**：图片插入后自动保持原始比例，最大化缩放以适应单元格，并在单元格内居中显示，不会变形。
+- **浮于文字上方**：图片以“浮于文字上方”方式呈现，不改变表格原有结构，不影响后续编辑。
+- **自然排序**：自动按文件名中的数字（如1.jpg、2.jpg、10.jpg）进行自然排序，确保图片顺序正确。
+- **图形化操作界面**：提供简洁的GUI界面，支持选择Word文档、图片文件夹、排序方式（升序/降序）。
+- **自动清理进程**：运行前自动清理后台残留的Word进程，避免文件被锁定，减少人为操作。
+
+### 快速开始
+
+1. 在 [Releases](https://github.com/你的用户名/你的仓库名/releases/latest) 下载对应的 `.exe` 安装包（已打包，无需安装AHK）。
+2. 双击运行工具。
+3. 选择待处理的Word文档。
+4. 选择存放图片的文件夹（确保图片按1.jpg、2.jpg…命名）。
+5. 点击“开始处理”，等待完成即可。
+
+**从源码运行（需安装 AutoHotkey v2.0）：**
+
+```autohotkey
+#Requires AutoHotkey v2.0
+; 直接双击运行 v1.1.ahk
 一、 软件简介
 本工具是一款基于 AutoHotkey 开发的 Word 文档辅助工具，主要用于在包含多页“2列4行”表格的 Word 文档中，自动批量插入对应顺序的施工图片。图片插入后自动保持原始比例，并居中放置在单元格内，且以“浮于文字上方”方式呈现，不会破坏原表格结构。
 
