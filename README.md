@@ -26,7 +26,7 @@
 
 ### 快速开始
 
-1. 在 [Releases](https://github.com/你的用户名/你的仓库名/releases/latest) 下载对应的 `.exe` 安装包（已打包，无需安装AHK）。
+1. 在 [Releases](https://github.com/tian0801hub/AutoHotkey-small-tools/releases/latest) 下载对应的 `.exe` 安装包（已打包，无需安装AHK）。
 2. 双击运行工具。
 3. 选择待处理的Word文档。
 4. 选择存放图片的文件夹（确保图片按1.jpg、2.jpg…命名）。
