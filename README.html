@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word图片批量插入工具 - 使用说明及免责声明</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --muted-color: #7f8c8d;
+            --border-color: #e0e0e0;
+            --warning-color: #e74c3c;
+            --success-color: #27ae60;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* 头部 */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 内容区域 */
+        .content {
+            padding: 30px;
+        }
+
+        /* 章节标题 */
+        .section-title {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        /* 卡片 */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* 列表样式 */
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        /* 提示框 */
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            border-left-color: #17a2b8;
+            color: #0c5460;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+
+        /* 代码或路径 */
+        .code {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 0.9em;
+            color: #d63384;
+        }
+
+        /* 免责声明部分 */
+        .disclaimer-section {
+            background-color: #fdf2f2;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .disclaimer-section h2 {
+            color: var(--warning-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--warning-color);
+            padding-bottom: 10px;
+        }
+
+        .disclaimer-section ol {
+            padding-left: 20px;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: var(--muted-color);
+            background-color: #f8f9fa;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 头部 -->
+    <div class="header">
+        <h1>@天tian</h1>
+        <h2>批量插入工具 · 使用说明</h2>
+        <p>基于 AutoHotkey v2.0 开发</p>
+        <p>参考文献及友情链接：<a href="https://github.com/AutoHotkey/AutoHotkey/releases">AutoHotkey</a>(@Github)</p>
+    </div>
+
+    <!-- 内容 -->
+    <div class="content">
+        
+        <!-- 一、软件简介 -->
+        <div class="section-title">一、软件简介</div>
+        <div class="card">
+            <p>本工具是一款基于 AutoHotkey 开发的 <strong>Word 文档自动化辅助工具</strong>。专用于在包含多页“2列4行”表格的 Word 文档中，自动按顺序批量插入施工图片。</p>
+            <p>插入的图片会自动保持原始比例，并<strong>居中放置在单元格内</strong>，以<strong>“浮于文字上方”</strong>的方式呈现，完全不会破坏原有表格结构和页面布局。</p>
+        </div>
+
+        <!-- 二、系统要求 -->
+        <div class="section-title">二、系统要求</div>
+        <div class="card">
+            <ul>
+                <li><strong>操作系统：</strong>Windows 7 / 10 / 11（支持 32位及 64位）。</li>
+                <li><strong>必备软件：</strong>已安装 <strong>Microsoft Word 2010 或更高版本</strong>，且能正常打开文档。</li>
+                <li><strong>运行方式：</strong>
+                    <ul>
+                        <li>若运行的是打包后的 <span class="code">.exe</span> 文件，无需安装额外软件。</li>
+                        <li>若运行的是 <span class="code">.ahk</span> 源码，请确保已安装 <strong>AutoHotkey v2.0</strong> 及以上版本。</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 三、准备工作 -->
+        <div class="section-title">三、准备工作（非常重要）</div>
+        <div class="card">
+            <div class="alert alert-info">
+                <strong>请务必仔细阅读本部分，否则可能导致插入失败！</strong>
+            </div>
+
+            <h3 style="color: var(--accent-color); margin-bottom: 10px;">1. Word 文档要求</h3>
+            <p>目标 Word 文档必须包含<strong>“2列4行”</strong>的表格结构（即您的原始模板）。</p>
+            <ul>
+                <li><strong>第 1 行</strong> 和 <strong>第 3 行</strong>为大格子（程序会自动在这里插入图片）。</li>
+                <li><strong>第 2 行</strong> 和 <strong>第 4 行</strong>为小格子（标题行，程序将自动跳过）。</li>
+            </ul>
+            <p>文档中可包含多个这样的表格（即多页），程序会自动批量处理所有符合要求的表格。</p>
+
+            <h3 style="color: var(--accent-color); margin: 20px 0 10px 0;">2. 图片文件夹要求</h3>
+            <ul>
+                <li>将所有需要插入的图片存放在<strong>同一个文件夹</strong>内。</li>
+                <li>支持的图片格式：<span class="code">.jpg</span>、<span class="code">.jpeg</span>、<span class="code">.png</span>、<span class="code">.bmp</span>、<span class="code">.gif</span>。</li>
+                <li>请务必按照插入顺序对图片进行命名（如 <span class="code">1.jpg</span>、<span class="code">2.jpg</span>、...、<span class="code">10.jpg</span>）。程序会自动按文件名中的数字（自然排序）依次读取。</li>
+            </ul>
+        </div>
+
+        <!-- 四、操作步骤 -->
+        <div class="section-title">四、操作步骤</div>
+        <div class="card">
+            <ol style="padding-left: 20px;">
+                <li><strong>关闭所有正在打开的 Word 文档</strong>（尤其是待处理的文档），避免文件被锁定无法编辑。</li>
+                <li>双击运行本工具（<span class="code">.exe</span> 或 <span class="code">.ahk</span>）。</li>
+                <li>点击 <strong>“浏览...”</strong> 按钮，选择待处理的 Word 文档。</li>
+                <li>点击 <strong>“浏览...”</strong> 按钮，选择存放图片的文件夹。</li>
+                <li>选择<strong>“排序方式”</strong>（推荐使用“升序”，即按图片名称从小到大排列）。</li>
+                <li>勾选<strong>“保持图片比例并居中”</strong>（默认已勾选，请保持勾选状态）。</li>
+                <li>点击 <strong>“开始处理”</strong> 按钮。</li>
+                <li>程序将自动启动 Word（窗口显示为最小化），处理完成后会弹出提示框，显示成功插入的图片数量。</li>
+            </ol>
+        </div>
+
+        <!-- 五、常见问题 -->
+        <div class="section-title">五、常见问题及处理</div>
+        <div class="card">
+            <ul>
+                <li><strong>提示“图片文件夹中没有找到匹配的图片”：</strong><br>请检查图片后缀名是否为小写，或者文件夹路径是否包含特殊字符。</li>
+                <li><strong>弹出“文件正在使用被锁定”：</strong><br>请完全关闭所有 Word 窗口，并确保没有后台残留的 Word 进程，然后再运行本工具（工具已内置自动清理功能，但手动关闭更保险）。</li>
+                <li><strong>提示“插入图片失败”：</strong><br>通常是因为图片文件损坏或格式不支持，请检查对应编号的图片。</li>
+                <li><strong>杀毒软件误报：</strong><br>AutoHotkey 编写的程序在部分杀毒软件中可能被误报为病毒。若出现此情况，请将本工具加入杀毒软件白名单后再使用。</li>
+            </ul>
+        </div>
+
+        <!-- 免责声明 -->
+        <div class="disclaimer-section">
+            <h2>免责声明</h2>
+            <p>在使用本工具前，请仔细阅读并同意以下条款：</p>
+            <ol>
+                <li><strong>数据备份提示</strong>：本工具会直接修改您指定的 Word 文档并保存。为避免不可预知的数据丢失风险，请在运行工具前，<strong>务必备份原始 Word 文档</strong>。因未备份导致的数据损坏或丢失，作者不承担任何责任。</li>
+                <li><strong>使用环境及兼容性</strong>：本工具基于 Microsoft Word 的 COM 接口开发。由于 Word 版本、系统环境或文档内部底层结构的细微差异，可能出现极少数的插入失败或界面异常情况。如遇此类问题，请停止使用，并联系作者协助处理或修改文档模板。</li>
+                <li><strong>免责范围</strong>：本工具仅供办公自动化辅助使用。作者不对因使用本工具而导致的直接、间接、偶然或后果性损失（包括但不限于文档损坏、数据丢失、软件故障或业务中断）承担法律责任。</li>
+                <li><strong>版权说明</strong>：本工具（包括其图形界面及源代码）版权归原作者所有。允许在内部办公环境中自由传播和使用，<strong>禁止将其用于任何商业盈利目的或擅自修改、反编译后进行二次售卖</strong>。</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <p>@天tian | 本工具仅供内部办公使用</p>
+    </div>
+</div>
+
+</body>
+</html>
