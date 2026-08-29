@@ -6,7 +6,6 @@
 >
 > **⚠️ 免责声明 Disclaimer：本工具仅供内部办公使用，请在使用前务必备份原始文档。禁止任何形式的商业售卖或转卖。**
 
-![GitHub Release](https://github.com/tian0801hub/AutoHotkey-small-tools)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6)
 ![AHK Version](https://img.shields.io/badge/AutoHotkey-v2.0-blue)
 ![License](https://img.shields.io/badge/License-Non--Commercial-e95f6d)
@@ -37,7 +36,6 @@
 
 ```autohotkey
 #Requires AutoHotkey v2.0
-; 直接双击运行 v1.1.ahk
 一、 软件简介
 本工具是一款基于 AutoHotkey 开发的 Word 文档辅助工具，主要用于在包含多页“2列4行”表格的 Word 文档中，自动批量插入对应顺序的施工图片。图片插入后自动保持原始比例，并居中放置在单元格内，且以“浮于文字上方”方式呈现，不会破坏原表格结构。
 
