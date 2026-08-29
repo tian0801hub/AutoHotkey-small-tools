@@ -12,7 +12,7 @@
 
 [下载最新版 / Download](https://github.com/tian0801hub/AutoHotkey-small-tools/releases/latest) · [问题反馈 / Issues](https://github.com/tian0801hub/AutoHotkey-small-tools/issues)
 
-![AutoHotkey-small-tools UI](nwico.png)
+![AutoHotkey-small-tools UI](public/assets/screenshots/nwico.png)
 
 ## 中文
 
